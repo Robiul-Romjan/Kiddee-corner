@@ -3,7 +3,7 @@
 }
 
 .logo{
-    width: 70px;
+    width: 60px;
     border-radius: 50%;
     margin-bottom: 10px;
 }
@@ -19,3 +19,16 @@
 .header .header-link.active{
     color: rgb(6, 26, 239);
 }
+
+
+@media only screen and (max-width: 600px) {
+    .user-profile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-img{
+       margin-bottom: 10px;
+    }
+   
+   }

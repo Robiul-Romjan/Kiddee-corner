@@ -1,28 +1,29 @@
 import { useContext } from "react";
+import Form from 'react-bootstrap/Form';
 import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const AddAToy = () => {
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     // console.log(user)
 
     const handleAddToy = (e) => {
-       e.preventDefault()
-       const form = e.target;
-       const photo = form.photo.value;
-       const name = form.name.value;
-       const sellerName = user?.displayName;
-       const email = user?.email;
-       const category = form.category.value;
-       const price = form.price.value;
-       const rating = form.rating.value;
-       const quantity = form.quantity.value;
-       const detail = form.detail.value;
+        e.preventDefault()
+        const form = e.target;
+        const photo = form.photo.value;
+        const name = form.name.value;
+        const sellerName = user?.displayName;
+        const email = user?.email;
+        const category = form.category.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const quantity = form.quantity.value;
+        const detail = form.detail.value;
 
-       const newToy = {
-        photo, name, sellerName, email, category, price, rating, quantity, detail
-       }
-       console.log(newToy)
+        const newToy = {
+            photo, name, sellerName, email, category, price, rating, quantity, detail
+        }
+        console.log(newToy)
     };
 
     return (
@@ -43,11 +44,12 @@ const AddAToy = () => {
                         <input className="form-control mb-3" name="email" value={user?.email} type="email" />
                     </div>
                     <div className="col">
-                        <select name="category" className="form-control">
+                        <Form.Select name="category" aria-label="Default select example">
+                            <option>Select category</option>
                             <option value="teddyBear">Teddy Bear</option>
                             <option value="horse">Horse</option>
                             <option value="cat">Cat</option>
-                        </select>
+                        </Form.Select>
                     </div>
                     <div className="col">
                         <input className="form-control mb-3" name="price" type="number" placeholder="toy price" />
