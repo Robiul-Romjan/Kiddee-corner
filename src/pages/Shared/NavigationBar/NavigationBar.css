@@ -1,0 +1,21 @@
+.navbar-container{
+    background: radial-gradient(#fff,#ffd6d6) ;
+}
+
+.logo{
+    width: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.header-link{
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgba(0,0,0,.55);
+    margin: 0 10px;
+}
+
+.header .header-link.active{
+    color: rgb(6, 26, 239);
+}
