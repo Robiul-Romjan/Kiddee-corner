@@ -1,5 +1,4 @@
 import { useContext, useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 import { AuthContext } from '../../Providers/AuthProvider';
@@ -11,10 +10,10 @@ const Register = () => {
     const [error, setError] = useState("");
     const auth = getAuth(app)
 
-    const {createUser} = useContext(AuthContext);
+    const { createUser } = useContext(AuthContext);
 
     const handleRegister = e => {
-        
+
         e.preventDefault();
         setError("")
         const form = e.target;
@@ -54,37 +53,38 @@ const Register = () => {
 
 
     return (
-        <div className='w-50 mx-auto mt-5 py-4 border p-4 register-div'>
-        <Form onSubmit={handleRegister}>
-            <Form.Group className="mb-3">
-                <Form.Label>Name</Form.Label>
-                <Form.Control name="name" type="text" placeholder="Enter Name" />
-            </Form.Group>
+        <div className='w-50 mx-auto mt-5 py-4 border p-4 form-container form-container rounded'>
+            <h2 className='text-center mb-4'>Please Sign Up</h2>
+            <Form onSubmit={handleRegister}>
+                <Form.Group className="mb-3">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control name="name" type="text" placeholder="Enter Name" />
+                </Form.Group>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Photo URl</Form.Label>
-                <Form.Control name="photo" type="text" placeholder="Enter photo url" />
-            </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Photo URl</Form.Label>
+                    <Form.Control name="photo" type="text" placeholder="Enter photo url" />
+                </Form.Group>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control name="email" type="email" placeholder="Enter email" required />
-            </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control name="email" type="email" placeholder="Enter email" required />
+                </Form.Group>
 
-            <Form.Group className="mb-3">
-                <Form.Label>Password</Form.Label>
-                <Form.Control name='password' type="password" placeholder="Password" required />
-            </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control name='password' type="password" placeholder="Password" required />
+                </Form.Group>
 
-            <Form.Text className="text-danger">
-                {error ? error : ""}
-            </Form.Text>
-            <Button className="w-100 mt-4" variant="primary" type="submit">
-                Register
-            </Button>
-        </Form>
-        <p className='mt-3'>Have an account? <Link to="/login">Please Login</Link></p>
-    </div>
+                <Form.Text className="text-danger">
+                    {error ? error : ""}
+                </Form.Text>
+                <button className="w-100 mt-4 btn-all" type="submit">
+                    Register
+                </button>
+            </Form>
+            <p className='mt-3'>Have an account? <Link to="/login">Please Login</Link></p>
+        </div>
     );
 };
 
