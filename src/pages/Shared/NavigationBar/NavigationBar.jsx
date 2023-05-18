@@ -29,7 +29,7 @@ const NavigationBar = () => {
                         navbarScroll
                     >
                         <Link to="/" className='nav-link header-link'>Home</Link>
-                        <Link to="/home" className='nav-link header-link'>All Toys</Link>
+                        <Link to="/all-toys" className='nav-link header-link'>All Toys</Link>
                         {
                             loading ? <Spinner animation="grow" variant="danger" /> :
                             user ? <>

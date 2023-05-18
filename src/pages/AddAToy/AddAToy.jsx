@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import Form from 'react-bootstrap/Form';
+import Swal from 'sweetalert2'
 import { AuthContext } from "../../Providers/AuthProvider";
 
 
@@ -23,7 +24,26 @@ const AddAToy = () => {
         const newToy = {
             photo, name, sellerName, email, category, price, rating, quantity, detail
         }
-        console.log(newToy)
+        // console.log(newToy)
+        fetch("http://localhost:5000/addToys", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(newToy)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'You have successfully Posted',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  })
+            }
+        })
     };
 
     return (
