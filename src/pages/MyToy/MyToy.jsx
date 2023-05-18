@@ -2,10 +2,13 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Table from 'react-bootstrap/Table';
 import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom';
+// import DetailModal from "../Shared/DetailModal/DetailModal";
 
 
 const MyToy = () => {
     const [toys, setToys] = useState([]);
+    // const [modalShow, setModalShow] = React.useState(false);
 
     const { user } = useContext(AuthContext);
 
@@ -19,10 +22,6 @@ const MyToy = () => {
             })
     }, [url, user?.email]);
 
-    const handleUpdate = (id) => {
-        console.log(id)
-
-    }
 
     const handleDelete = (id) => {
         Swal.fire({
@@ -42,6 +41,8 @@ const MyToy = () => {
                     .then(res => res.json())
                     .then(data => {
                         if (data.deletedCount > 0) {
+                            const remaining = toys.filter(toy => toy._id !== id);
+                            setToys(remaining);
                             Swal.fire(
                                 'Deleted!',
                                 'Your file has been deleted.',
@@ -80,8 +81,9 @@ const MyToy = () => {
                                     <td> {toy.price} </td>
                                     <td> {toy.quantity} </td>
                                     <td>
-                                        <button onClick={() => handleUpdate(toy._id)} className="btn-all me-3">Update</button>
-                                        <button onClick={() => handleDelete(toy._id)} className="btn-all">Delete</button>
+                                      <Link to={`/updateToy/${toy._id}`} className="btn-all">Update</Link>
+                                       
+                                        <button onClick={() => handleDelete(toy._id)} className="btn-all ms-3">Delete</button>
                                     </td>
                                 </tr>
                             ))
