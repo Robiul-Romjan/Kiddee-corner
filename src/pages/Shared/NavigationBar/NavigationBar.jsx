@@ -18,7 +18,7 @@ const NavigationBar = () => {
     }
 
     return (
-        <Navbar className='navbar-container' expand="lg">
+        <Navbar className='navbar-container sticky-top' expand="lg">
             <Container>
             <Navbar.Brand className='header-title' href="/"><span><img className='logo' src={logo} alt="" /></span> <span className='text-primary fs-2 fw-bold'>Kiddie</span><span className='text-danger fw-bold'>Corner</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -33,7 +33,7 @@ const NavigationBar = () => {
                         {
                             loading ? <Spinner animation="grow" variant="danger" /> :
                             user ? <>
-                                <Link to="/home" className='nav-link header-link'>My Toys</Link>
+                                <Link to="/my-toys" className='nav-link header-link'>My Toys</Link>
                                 <Link to="/add-toy" className='nav-link header-link'>Add A Toy</Link>
                             </> : ""
                         }

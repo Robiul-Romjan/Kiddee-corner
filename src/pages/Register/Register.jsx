@@ -58,12 +58,7 @@ const Register = () => {
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3">
                     <Form.Label>Name</Form.Label>
-                    <Form.Control name="name" type="text" placeholder="Enter Name" />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>Photo URl</Form.Label>
-                    <Form.Control name="photo" type="text" placeholder="Enter photo url" />
+                    <Form.Control name="name" type="text" placeholder="Enter Name" required/>
                 </Form.Group>
 
                 <Form.Group className="mb-3">
@@ -74,6 +69,11 @@ const Register = () => {
                 <Form.Group className="mb-3">
                     <Form.Label>Password</Form.Label>
                     <Form.Control name='password' type="password" placeholder="Password" required />
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                    <Form.Label>Photo URl</Form.Label>
+                    <Form.Control name="photo" type="url" placeholder="Enter photo url" required/>
                 </Form.Group>
 
                 <Form.Text className="text-danger">
