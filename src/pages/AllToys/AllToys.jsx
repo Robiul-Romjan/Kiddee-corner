@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
 
 const AllToys = () => {
@@ -31,7 +31,7 @@ const AllToys = () => {
                             <td> {toy.price} </td>
                             <td> {toy.quantity} </td>
                             <td>
-                                <button className="btn-all">View Details</button>
+                                <Link to={`/view-details/${toy._id}`} className="btn-all">View Details</Link>
                             </td>
                         </tr> 
                         ))
