@@ -1,6 +1,9 @@
 .review-div{
     transition: all .5s;
 }
+.review-div p{
+    text-align: justify;
+}
 
 .review-div:hover{
     transform: translateY(20px);

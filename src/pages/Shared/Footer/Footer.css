@@ -1,0 +1,25 @@
+.footer{
+    background: #121212;
+    color: white;
+    padding: 50px 0 15px 0;
+}
+
+.part-1 img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.part-1 h4{
+    color: #ff523b;
+    margin-left: 20px;
+}
+
+.app img{
+    width: 120px;
+}
+
+.contact input{
+    padding: 7px;
+    border-radius: 8px;
+}
