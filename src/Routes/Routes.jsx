@@ -10,6 +10,7 @@ import MyToy from "../pages/MyToy/MyToy";
 import PrivateRoute from "./PrivateRoute";
 import ViewDetails from "../pages/ViewDetails/ViewDetails";
 import UpdateToy from "../pages/UpdateToy/UpdateToy";
+import Blogs from "../pages/Blogs/Blogs";
 
 
 const router = createBrowserRouter([
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <LogIn />
+            },
+            {
+                path: "/blogs",
+                element: <Blogs />
             }
         ]
     }

@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -54,7 +55,7 @@ const ShopByCategory = () => {
                                                             <Rating style={{ maxWidth: 100 }} value={item.rating} readOnly />
                                                         </span>
                                                     </div>
-                                                    <button className='btn-all'>View Detail</button>
+                                                    <Link to={`/view-details/${item._id}`} className="btn-all">View Details</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,7 +83,7 @@ const ShopByCategory = () => {
                                                             <Rating style={{ maxWidth: 100 }} value={item.rating} readOnly />
                                                         </span>
                                                     </div>
-                                                    <button className='btn-all'>View Detail</button>
+                                                    <Link to={`/view-details/${item._id}`} className="btn-all">View Details</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,7 +111,7 @@ const ShopByCategory = () => {
                                                             <Rating style={{ maxWidth: 100 }} value={item.rating} readOnly />
                                                         </span>
                                                     </div>
-                                                    <button className='btn-all'>View Detail</button>
+                                                    <Link to={`/view-details/${item._id}`} className="btn-all">View Details</Link>
                                                 </div>
                                             </div>
                                         </div>

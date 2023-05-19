@@ -36,3 +36,7 @@ h1,h2,h3,h4,p,span{
     width: 100%;
     height: 300px;
 }
+
+.first-q-col{
+    border-right: 2px solid rgb(178, 32, 61);
+}

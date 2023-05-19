@@ -37,7 +37,7 @@ const NavigationBar = () => {
                                 <Link to="/add-toy" className='nav-link header-link'>Add A Toy</Link>
                             </> : ""
                         }
-                        <Link to="/home" className='nav-link header-link'>Blogs</Link>
+                        <Link to="/blogs" className='nav-link header-link'>Blogs</Link>
                     </Nav>
                     <Form className="d-flex">
                         {loading ? <Spinner animation="grow" variant="danger" /> :
