@@ -1,0 +1,13 @@
+.review-div{
+    transition: all .5s;
+}
+
+.review-div:hover{
+    transform: translateY(20px);
+}
+
+.people-image{
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid rgb(199, 76, 101);
+}

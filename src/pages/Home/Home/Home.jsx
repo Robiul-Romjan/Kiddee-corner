@@ -1,6 +1,7 @@
 import Banner from "../Banner/Banner";
 import Exclusive from "../Exclusive/Exclusive";
 import Gallery from "../Gallery/Gallery";
+import Review from "../Review/Review";
 import ShopByCategory from "../ShopByCategory/ShopByCategory";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
             <Gallery />
             <ShopByCategory />
             <Exclusive />
+            <Review />
         </div>
     );
 };
