@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
@@ -50,6 +50,10 @@ const LogIn = () => {
                 setError(error.message)
             })
     };
+
+    useEffect(()=>{
+        document.title= "KiddieCorner | Login"
+    }, [])
 
 
     return (

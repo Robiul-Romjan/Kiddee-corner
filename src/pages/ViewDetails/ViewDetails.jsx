@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import "./ViewDetails.css"
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import { useEffect } from "react";
 
 
 
@@ -10,6 +11,10 @@ const ViewDetails = () => {
     const toy = useLoaderData();
     console.log(toy)
     const { detail, email, name, photo, price, quantity, rating, sellerName } = toy;
+
+    useEffect(()=>{
+        document.title= "KiddieCorner | View-details"
+    }, [])
 
     return (
         <div className="py-5 form-container">

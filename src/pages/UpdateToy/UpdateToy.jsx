@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2'
 
@@ -34,7 +35,11 @@ const UpdateToy = () => {
                     })
                 }
             })
-    }
+    };
+
+    useEffect(()=>{
+        document.title= "KiddieCorner | Update-Toy"
+    }, [])
 
     return (
         <div className='form-container'>

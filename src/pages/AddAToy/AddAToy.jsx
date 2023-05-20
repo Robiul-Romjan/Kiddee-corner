@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Form from 'react-bootstrap/Form';
 import Swal from 'sweetalert2'
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -45,6 +45,10 @@ const AddAToy = () => {
             }
         })
     };
+
+    useEffect(()=>{
+        document.title= "KiddieCorner | Add-A-Toy"
+    }, [])
 
     return (
         <div className="container form-container mt-5 rounded">

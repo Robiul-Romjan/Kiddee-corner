@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 
 const MyToy = () => {
     const [toys, setToys] = useState([]);
-    // const [modalShow, setModalShow] = React.useState(false);
-
     const { user } = useContext(AuthContext);
 
     const url = `http://localhost:5000/userToys?email=${user?.email}`
@@ -22,6 +20,17 @@ const MyToy = () => {
             })
     }, [url, user?.email]);
 
+    const handleAscending = () => {
+        fetch(`http://localhost:5000/userToyByAscending?email=${user?.email}`)
+        .then(res => res.json())
+        .then(data => setToys(data))
+    }
+
+    const handleDescending = () => {
+        fetch(`http://localhost:5000/userToyByDescending?email=${user?.email}`)
+        .then(res => res.json())
+        .then(data => setToys(data))
+    }
 
     const handleDelete = (id) => {
         Swal.fire({
@@ -54,9 +63,17 @@ const MyToy = () => {
         })
     };
 
+    useEffect(()=>{
+        document.title= "KiddieCorner | My-Toys"
+    }, [])
+
     return (
         <div className="form-container">
             <h2 className="text-center mb-4">My Toys</h2>
+            <div className="text-center mb-4">
+                <button onClick={handleAscending} className="btn-all me-4">Ascending By Price</button>
+                <button onClick={handleDescending} className="btn-all">Descending By Price</button>
+            </div>
             <div className="container">
                 <Table striped="columns">
                     <thead>
@@ -71,7 +88,8 @@ const MyToy = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {
+                        { 
+                        toys ?
                             toys.map((toy, i) => (
                                 <tr key={toy._id}>
                                     <td>{i + 1}</td>
@@ -86,7 +104,7 @@ const MyToy = () => {
                                         <button onClick={() => handleDelete(toy._id)} className="btn-all ms-3">Delete</button>
                                     </td>
                                 </tr>
-                            ))
+                            )) : <h2 className="mt-5">You have no toys added</h2>
                         }
                     </tbody>
                 </Table>

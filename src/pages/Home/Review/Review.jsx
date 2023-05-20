@@ -43,20 +43,6 @@ const Review = () => {
                     </div>
                 </div>
             </div>
-            <div className="row">
-                <div className="col-lg-6">
-                    <div className="card p-5" data-aos="flip-left">
-                        <h1>hello</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum maiores magnam earum iusto vitae soluta nobis. Ut, laborum nisi.</p>
-                    </div>
-                </div>
-                <div className="col-lg-6">
-                    <div className="card p-5">
-                        <h1>hello</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit laborum maiores magnam earum iusto vitae soluta nobis. Ut, laborum nisi.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 };
