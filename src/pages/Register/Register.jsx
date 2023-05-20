@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from '../../Providers/AuthProvider';
 import { getAuth, updateProfile } from 'firebase/auth';
 import app from '../../firebaseConfig/firebase.confiq';
+import Swal from 'sweetalert2'
+
 
 
 const Register = () => {
@@ -34,6 +36,12 @@ const Register = () => {
                 regUser.displayName = name;
                 regUser.photoURL = photo;
                 // setUser(regUser)
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'You have successfully registered',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  })
                 updateProfile(auth.currentUser, {
                     displayName: name, photoURL: photo
                 }).then(() => {

@@ -7,9 +7,11 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const ShopByCategory = () => {
     const [toys, setToys] = useState([])
     const [activeTab, setActiveTab] = useState('teddyBear')
+
 
     // console.log(toys)
 

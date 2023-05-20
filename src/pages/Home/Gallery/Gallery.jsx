@@ -7,32 +7,50 @@ const Gallery = () => {
                 <h4 className="text-center fw-bold mb-4">KiddieCorner Gallery</h4>
                 <div className="col-lg-4 mb-4">
                     <div className="gallery">
-                        <img className="img-fluid" src="https://i.ibb.co/ZhD6Mcf/image1.jpg" alt="" />
+                        <img className="img-fluid" src="https://i.ibb.co/ZhD6Mcf/image1.jpg" alt="" 
+                        data-aos="flip-up"
+                        data-aos-duration="1000"
+                        />
                     </div>
                 </div>
                 <div className="col-lg-4 mb-4">
                     <div className="gallery">
-                        <img className="img-fluid" src="https://i.ibb.co/tBCpyYX/image2.jpg" alt="" />
+                        <img className="img-fluid" src="https://i.ibb.co/tBCpyYX/image2.jpg" alt="" 
+                        data-aos="flip-up"
+                        data-aos-duration="1000"
+                        />
                     </div>
                 </div>
                 <div className="col-lg-4 mb-4">
                     <div className="gallery">
-                        <img className="img-fluid" src="https://i.ibb.co/nB9p5h8/image3.jpg" alt="" />
+                        <img className="img-fluid" src="https://i.ibb.co/nB9p5h8/image3.jpg" alt="" 
+                        data-aos="flip-up"
+                        data-aos-duration="1000"
+                        />
                     </div>
                 </div>
                 <div className="col-lg-4 mb-4">
                     <div className="gallery">
-                        <img className="img-fluid" src="https://i.ibb.co/rGV6rqq/image4.jpg" alt="" />
+                        <img className="img-fluid" src="https://i.ibb.co/rGV6rqq/image4.jpg" alt="" 
+                        data-aos="flip-up"
+                        data-aos-duration="1000"
+                        />
                     </div>
                 </div>
                 <div className="col-lg-4 mb-4">
                     <div className="gallery">
-                        <img className="img-fluid" src="https://i.ibb.co/QQRK56Q/image5.jpg" alt="" />
+                        <img className="img-fluid" src="https://i.ibb.co/QQRK56Q/image5.jpg" alt="" 
+                        data-aos="flip-up"
+                        data-aos-duration="1000"
+                        />
                     </div>
                 </div>
                 <div className="col-lg-4 mb-4">
                     <div className="gallery">
-                        <img className="img-fluid" src="https://i.ibb.co/pRqNJY3/image6.jpg" alt="" />
+                        <img className="img-fluid" src="https://i.ibb.co/pRqNJY3/image6.jpg" alt="" 
+                        data-aos="flip-up"
+                        data-aos-duration="1000"
+                        />
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2'
 import { FaGoogle } from "react-icons/fa";
 
 const LogIn = () => {
@@ -25,6 +26,12 @@ const LogIn = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user)
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'You have successfully login',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  })
                 navigate(from, { replace: true }) || "/"
             })
             .catch(error => {
