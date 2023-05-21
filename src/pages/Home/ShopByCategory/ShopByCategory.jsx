@@ -16,7 +16,7 @@ const ShopByCategory = () => {
     // console.log(toys)
 
     useEffect(() => {
-        fetch("http://localhost:5000/allToys")
+        fetch("https://assignment-11-server-sepia.vercel.app/allToys")
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])
@@ -57,7 +57,7 @@ const ShopByCategory = () => {
                                                             <Rating style={{ maxWidth: 100 }} value={item.rating} readOnly />
                                                         </span>
                                                     </div>
-                                                    <Link to={`/view-details/${item._id}`} className="btn-all">View Details</Link>
+                                                    <Link to={`/view-details/${item._id}`} className="btn-all"> Details</Link>
                                                 </div>
                                             </div>
                                         </div>

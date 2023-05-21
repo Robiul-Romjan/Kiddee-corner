@@ -25,7 +25,7 @@ const AddAToy = () => {
             photo, name, sellerName, email, category, price, rating, quantity, detail
         }
         // console.log(newToy)
-        fetch("http://localhost:5000/addToys", {
+        fetch("https://assignment-11-server-sepia.vercel.app/addToys", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -56,10 +56,10 @@ const AddAToy = () => {
             <form onSubmit={handleAddToy} className="w-75 mx-auto">
                 <div className="row row-cols-2">
                     <div className="col">
-                        <input className="form-control mb-3" name="photo" type="url" placeholder="toy image URL" />
+                        <input className="form-control mb-3" name="photo" type="url" placeholder="toy image URL" required />
                     </div>
                     <div className="col">
-                        <input className="form-control mb-3" name="name" type="text" placeholder="type toy name" />
+                        <input className="form-control mb-3" name="name" type="text" placeholder="type toy name" required/>
                     </div>
                     <div className="col">
                         <input className="form-control mb-3" name="sellerName" value={user?.displayName} type="text" placeholder="type your name" />
@@ -68,7 +68,7 @@ const AddAToy = () => {
                         <input className="form-control mb-3" name="email" value={user?.email} type="email" />
                     </div>
                     <div className="col">
-                        <Form.Select name="category" aria-label="Default select example">
+                        <Form.Select name="category" aria-label="Default select example" required>
                             <option>Select category</option>
                             <option value="teddyBear">Teddy Bear</option>
                             <option value="horse">Horse</option>
@@ -76,13 +76,13 @@ const AddAToy = () => {
                         </Form.Select>
                     </div>
                     <div className="col">
-                        <input className="form-control mb-3" name="price" type="number" placeholder="toy price" />
+                        <input className="form-control mb-3" name="price" type="number" placeholder="toy price" required/>
                     </div>
                     <div className="col">
-                        <input className="form-control mb-3" name="rating" type="number" placeholder="type rating" />
+                        <input min="0" max="5" className="form-control mb-3" name="rating" type="number" placeholder="type rating" required/>
                     </div>
                     <div className="col">
-                        <input className="form-control mb-3" name="quantity" type="number" placeholder="available quantity" />
+                        <input className="form-control mb-3" name="quantity" type="number" placeholder="available quantity" required/>
                     </div>
                     <div className="col-lg-12 w-full mb-3">
                         <textarea className="form-control" rows='8' name="detail" placeholder="type details"></textarea>

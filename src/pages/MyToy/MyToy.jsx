@@ -10,7 +10,7 @@ const MyToy = () => {
     const [toys, setToys] = useState([]);
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/userToys?email=${user?.email}`
+    const url = `https://assignment-11-server-sepia.vercel.app/userToys?email=${user?.email}`
 
     useEffect(() => {
         fetch(url)
@@ -21,13 +21,13 @@ const MyToy = () => {
     }, [url, user?.email]);
 
     const handleAscending = () => {
-        fetch(`http://localhost:5000/userToyByAscending?email=${user?.email}`)
+        fetch(`https://assignment-11-server-sepia.vercel.app/userToyByAscending?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setToys(data))
     }
 
     const handleDescending = () => {
-        fetch(`http://localhost:5000/userToyByDescending?email=${user?.email}`)
+        fetch(`https://assignment-11-server-sepia.vercel.app/userToyByDescending?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setToys(data))
     }
@@ -44,7 +44,7 @@ const MyToy = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/usertoys/${id}`, {
+                fetch(`https://assignment-11-server-sepia.vercel.app/usertoys/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -89,22 +89,22 @@ const MyToy = () => {
                     </thead>
                     <tbody>
                         { 
-                        toys ?
+                        toys &&
                             toys.map((toy, i) => (
                                 <tr key={toy._id}>
                                     <td>{i + 1}</td>
                                     <td className="my-3"> {toy?.sellerName} </td>
-                                    <td> {toy.name} </td>
-                                    <td> {toy.category} </td>
-                                    <td> {toy.price} </td>
-                                    <td> {toy.quantity} </td>
+                                    <td> {toy?.name} </td>
+                                    <td> {toy?.category} </td>
+                                    <td> ${toy.price} </td>
+                                    <td> {toy.quantity} items </td>
                                     <td>
                                       <Link to={`/updateToy/${toy._id}`} className="btn-all">Update</Link>
                                        
                                         <button onClick={() => handleDelete(toy._id)} className="btn-all ms-3">Delete</button>
                                     </td>
                                 </tr>
-                            )) : <h2 className="mt-5">You have no toys added</h2>
+                            ))
                         }
                     </tbody>
                 </Table>

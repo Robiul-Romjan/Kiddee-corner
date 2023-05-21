@@ -17,7 +17,7 @@ const UpdateToy = () => {
             price, quantity, detail
         }
 
-        fetch(`http://localhost:5000/usertoys/${toy._id}`, {
+        fetch(`https://assignment-11-server-sepia.vercel.app/usertoys/${toy._id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json"

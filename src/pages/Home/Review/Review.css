@@ -1,5 +1,6 @@
 .review-div{
     transition: all .5s;
+    height: 420px;
 }
 .review-div p{
     text-align: justify;

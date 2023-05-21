@@ -26,14 +26,14 @@ const router = createBrowserRouter([
             {
                 path: "/all-toys",
                 element: <AllToys />,
-                loader: () => fetch("http://localhost:5000/allToys")
+                loader: () => fetch("https://assignment-11-server-sepia.vercel.app/allToys")
             },
             {
                 path: "/view-details/:id",
                 element: <PrivateRoute>
                     <ViewDetails />
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/allToys/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-11-server-sepia.vercel.app/allToys/${params.id}`)
             },
             {
                 path: "/my-toys",
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <UpdateToy />
                 </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/allToys/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-11-server-sepia.vercel.app/allToys/${params.id}`)
             },
             {
                 path: "/register",

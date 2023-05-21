@@ -11,7 +11,7 @@ const AllToys = () => {
     
   
     const handleSearch =()=> {
-        fetch(`http://localhost:5000/toySearchByName/${searchText}`)
+        fetch(`https://assignment-11-server-sepia.vercel.app/toySearchByName/${searchText}`)
         .then(res => res.json())
         .then(data => setAllToys(data))
     }
@@ -46,10 +46,10 @@ const AllToys = () => {
                             <tr key={toy._id}>
                             <td>{i + 1}</td>
                             <td className="my-3"> {toy?.sellerName} </td>
-                            <td> {toy.name} </td>
-                            <td> {toy.category} </td>
-                            <td> {toy.price} </td>
-                            <td> {toy.quantity} </td>
+                            <td> {toy?.name} </td>
+                            <td> {toy?.category} </td>
+                            <td> ${toy?.price} </td>
+                            <td> {toy?.quantity} items </td>
                             <td>
                                 <Link to={`/view-details/${toy._id}`} className="btn-all">View Details</Link>
                             </td>

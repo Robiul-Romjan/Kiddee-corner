@@ -10,7 +10,7 @@ const Review = () => {
             <div className="row">
                 <h4 className="text-center mb-4">What People Says</h4>
                 <div className="col-lg-4 mb-4">
-                    <div className="text-center shadow-lg p-4 review-div rounded">
+                    <div className="text-center shadow-lg py-4 px-3 review-div rounded">
                         <h1 className="text-danger"><FaQuoteLeft /></h1>
                         <p className="text-muted my-4">I recently purchased a toy from your website for my niece, and I must say, I was thoroughly impressed! The quality of the toy exceeded my expectations, and the attention to detail was remarkable.</p>
                         <div>
@@ -21,7 +21,7 @@ const Review = () => {
                     </div>
                 </div>
                 <div className="col-lg-4 mb-4">
-                    <div className="text-center shadow-lg p-4 review-div rounded">
+                    <div className="text-center shadow-lg py-4 px-3 review-div rounded">
                         <h1 className="text-danger"><FaQuoteLeft /></h1>
                         <p className="text-muted my-4"> I am always on the lookout for animal toys that can engage and inspire young minds. I am delighted to have discovered your website! The range of animal toys you offer is outstanding!</p>
                         <div>
@@ -32,7 +32,7 @@ const Review = () => {
                     </div>
                 </div>
                 <div className="col-lg-4 mb-4">
-                    <div className="text-center shadow-lg p-4 review-div rounded">
+                    <div className="text-center shadow-lg py-4 px-3 review-div rounded">
                         <h1 className="text-danger"><FaQuoteLeft /></h1>
                         <p className="text-muted my-4">I just wanted to express my gratitude for the exceptional customer service I received while shopping on your toy website. The team went above and beyond to answer all my questions promptly and provide.</p>
                         <div>

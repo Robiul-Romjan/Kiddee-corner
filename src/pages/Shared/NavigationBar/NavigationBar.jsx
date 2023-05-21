@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "./NavigationBar.css"
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import logo from "/logo.png";
@@ -28,16 +28,16 @@ const NavigationBar = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Link to="/" className='nav-link header-link'>Home</Link>
-                        <Link to="/all-toys" className='nav-link header-link'>All Toys</Link>
+                        <NavLink to="/" className='header-link'>Home</NavLink>
+                        <NavLink to="/all-toys" className='header-link'>All Toys</NavLink>
                         {
                             loading ? <Spinner animation="grow" variant="danger" /> :
                             user ? <>
-                                <Link to="/my-toys" className='nav-link header-link'>My Toys</Link>
-                                <Link to="/add-toy" className='nav-link header-link'>Add A Toy</Link>
+                                <NavLink to="/my-toys" className='header-link'>My Toys</NavLink>
+                                <NavLink to="/add-toy" className='header-link'>Add A Toy</NavLink>
                             </> : ""
                         }
-                        <Link to="/blogs" className='nav-link header-link'>Blogs</Link>
+                        <NavLink to="/blogs" className='header-link'>Blogs</NavLink>
                     </Nav>
                     <Form className="d-flex">
                         {loading ? <Spinner animation="grow" variant="danger" /> :

@@ -23,14 +23,15 @@ const Footer = () => {
                     <div className="col-lg-4">
                         <div className="contact">
                             <h4 className="text-danger">Contact Us</h4>
-                            <input className="w-100 mt-4" type="text" placeholder="type your name" />
-                            <input className="w-100 mt-3" type="email" placeholder="type your email" />
-                            <input className="mt-3 bg-danger w-100 text-white" type="submit" value="Contact" />
+                            <h5>Email:</h5>
+                            <p>kiddie-corner@gmail.com</p>
+                            <h5>Phone:</h5>
+                            <p>+994567324</p>
                         </div>
                     </div>
                     <div className="col-lg-2">
-                        <h4 className="text-danger text-center">Follow Us</h4>
-                        <div className="text-center mt-3">
+                        <h4 className="text-danger">Follow Us</h4>
+                        <div className=" mt-3">
                             <p className="fs-3 m-0"> <FaFacebook /> </p>
                             <p className="fs-3 m-0"> <FaGithubAlt /> </p>
                             <p className="fs-3 m-0"> <FaTwitter /> </p>
